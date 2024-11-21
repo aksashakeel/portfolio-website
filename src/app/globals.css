@@ -1,0 +1,388 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Body styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgb(19, 18, 18);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Styling */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: white;
+  width: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+/* Logo Styling */
+header .logo h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+/* Navigation styling */
+header nav ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+header nav ul li {
+  margin: 0 8px;
+  font-weight: bold;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+  padding: 10px 10px;
+}
+
+header nav ul li a:hover {
+  color: rgb(187, 146, 12);
+}
+
+/* Mobile screen adjustments */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  header nav ul {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  header nav ul li {
+    margin: 10px 0;
+  }
+
+  header nav ul li a {
+    font-size: 1.2rem;
+  }
+}
+
+/* Footer Styling */
+footer {
+  background-color: black;
+  color: white;
+  padding: 20px 40px;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: auto;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.socials {
+  margin-bottom: 15px;
+}
+
+.socials a {
+  color: white;
+  margin: 0 15px;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+footer .socials a:hover {
+  color: rgb(187, 146, 12);
+}
+
+footer p {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+/* Mobile screen adjustments */
+@media (max-width: 768px) {
+  footer {
+    padding: 15px 20px;
+  }
+
+  footer .socials a {
+    font-size: 1.3rem;
+  }
+
+  footer p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    padding: 10px 15px;
+  }
+
+  footer .socials a {
+    font-size: 1.1rem;
+  }
+
+  footer p {
+    font-size: 0.8rem;
+  }
+}
+
+/* About section */
+.about-text {
+  justify-content: center;
+  margin: auto;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.about-h {
+  color: rgb(187, 146, 12);
+  font-weight: bold;
+  font-size: 45px;
+}
+
+/* Projects container (flexbox setup) */
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  margin-top: 150px;
+  box-sizing: border-box;
+}
+
+/*  project card */
+.project-card {
+  background-color: rgb(187, 146, 12);
+  padding: 20px;
+  width: calc(33.333% - 20px); 
+  box-sizing: border-box;
+  border-radius: 8px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.05); 
+}
+
+/* Project card images */
+.project-image {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Project card titles */
+.project-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #333;
+}
+
+@media (min-width: 768px) {
+  .project-card {
+    width: calc(33.333% - 20px);
+  }
+}
+
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .project-card {
+    width: calc(50% - 20px); 
+  }
+}
+
+@media (max-width: 479px) {
+  .project-card {
+    width: 100%; 
+    margin: 10px 0; 
+  }
+}
+
+/* Intro Section Styles */
+.intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+text-align: center;
+  color: white;
+  margin-top: auto;
+}
+
+.intro-img {
+  height: auto;
+  width: 100%;
+  
+}
+
+.intro-text {
+  text-align: left;
+}
+
+.intro-h {
+  color: rgb(187, 146, 12);
+  font-size: 2rem;
+}
+
+.btn {
+  padding: 10px;
+  font-size: 18px;
+  width: 100px;
+  border-radius: 8px;
+  background-color: rgb(187, 146, 12);
+}
+
+
+@media (max-width: 768px) {
+  .intro {
+    flex-direction: column;
+    margin: auto;
+  
+  }
+
+  .intro-img {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 80px;
+    height: fit-content;
+    border-radius: 20%;
+  }
+
+  .intro-text{
+    text-align: center;
+  }
+}
+
+/* Contact Page Styles */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  
+}
+
+.form-container {
+  background-color: #1f1f1f; 
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 500px; 
+  color: white;
+}
+
+.contact-heading {
+  text-align: center;
+  font-size: 2rem;
+  color: rgb(187, 146, 12);
+  margin-bottom: 20px;
+}
+
+.contact-form .form-group {
+  margin-bottom: 15px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 6px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #333;
+  color: white;
+}
+
+.contact-form button {
+  background-color: rgb(187, 146, 12);
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  width: 100%;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: rgb(187, 146, 12);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .form-container {
+    width: 100%; 
+  }
+
+  .contact-heading {
+    font-size: 1.5rem; 
+  }
+
+
+.contact-form button {
+    font-size: 1rem;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-heading {
+    font-size: 1.3rem; 
+  }
+
+  .contact-form input, .contact-form textarea {
+    font-size: 0.9rem;
+  }
+}
